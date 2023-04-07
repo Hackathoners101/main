@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} {% endblock %} </title>
+
+    <link res="stylesheet" href=" {% static 'base.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    {% block css_additional %} 
+    
+    {% endblock %}
+</head>
+
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>  
+</body>
+</html>

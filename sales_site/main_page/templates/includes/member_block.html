@@ -1,0 +1,19 @@
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href=" {% static 'main_page/css/block.css' %}">
+  
+</head>
+<body>
+  <div class="block-container">
+    <a href="{% url 'portfolio-projects' title=one_Member.name %}" class="block-link">
+      <div class="block-content">
+        <img src="{{ member.photo.url }}" alt="{{ member.name }} photo">
+        <div class="block-text">
+          <div class="title">{{ one_Member.name|title }}</div>
+          <div class="description">{{ one_Member.experience|lower|truncatechars:100 }}</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</body>

@@ -1,0 +1,15 @@
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=" {% static 'main_page/css/block.css' %}">
+</head>
+<body>
+  <div class="block-container">
+    <a href="{% url 'portfolio-projects' title=one_portfolio.title %}" class="block-link">
+      <div class="title">{{ one_portfolio.title|title }}</div>
+      <div class="description">{{ forloop.counter }} {{ one_portfolio.description|lower }}</div>
+    </a>
+  </div>
+</body>

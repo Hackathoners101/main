@@ -1,0 +1,36 @@
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href=" {% static 'main_page/css/member_left.css' %}">
+</head>
+
+
+<body>
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="info-card info-card--left">
+            <img class="info-card__image" id=Foto src="{% static 'main_page/img/Victoria.jpg' %}">
+            <div class="info-card__specs">
+                <p><h1>Victoria</h1></p>
+                <p style="text-align: center">Some text example about your selfSome text example about your selfSome text example about your selfSome text example about your self</p>
+                <p>4 Years of Expirience</p>
+            </div>
+        </div>
+        <div class="info-card info-card--right">
+            <img class="info-card__image" id=Foto src="{% static 'main_page/img/Nastya.jpg' %}" alt="Your photo">
+            <div class="info-card__specs">
+                <p><h1>Anastasia</h1></p>
+                <p style="text-align: center">Some text example about your selfSome text example about your selfSome text example about your selfSome text example about your self</p>
+                <p>3 Years of Expirience</p>
+            </div>
+        </div>
+        <div class="info-card info-card--left">
+            <img class="info-card__image" id=Foto src="{% static 'main_page/img/Egor_mem.jpg' %}">
+            {% comment %} <img class="info-card__image" id=Foto src="{% static 'main_page/img/Egor.png' %}"> {% endcomment %}
+            <div class="info-card__specs">
+                <p><h1>Egor  | CTO </h1></p>
+                <p style="text-align: center">More than 7 years in development. Worked on international AI and blockchain related projects. </p>
+                <p>7 Years of Expirience</p>
+            </div>
+        </div>
+    </div>
+</body>

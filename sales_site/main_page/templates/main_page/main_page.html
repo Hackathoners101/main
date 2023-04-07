@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+{% block css_additional %}
+<link rel="stylesheet" href=" {% static 'main_page/css/main_page.css' %}">
+<link rel="stylesheet" href=" {% static 'main_page/css/four_square.css' %}">
+<script src="{% static 'main_page/js/main_page.js' %}"></script>
+<script src="{% static 'main_page/js/four_square.js' %}"></script>
+{% endblock %}
+{% block content %}
+    {% include 'includes/navbar.html' %}
+    <div class="container centered-container">
+        <h1 class="inline-header">
+            Мы создаем 
+        </h1>
+        <h1 class="inline-header">
+            <span class="changing-text">
+                Загрузка..
+            </span>
+        </h1>
+        <h4>
+            Если которко, то мы комания, которая позволяет вам избавиться от головной боли в техническом мире
+        </h4>
+    </div>
+    <br><br>
+    {% include 'includes/four_square.html' %}
+    <br>
+    <br>
+    <br>
+    <h1>
+        Our background
+    </h1>
+    <br>
+    <div class="thin-white-line"></div>
+
+    <h2>All projects: {{ count|add:8 }} | Done: {{ count }}</h2>
+    {% for one_portfolio in Portfolio %}
+        <br>
+        {% include 'includes/block.html' %}
+    {% endfor %}
+    <br><br><br><br>
+    <h1>Tarifs</h1>
+    <br>
+    {% include 'includes/price.html' %}
+    <br>
+    <h1>
+        Team
+    </h1>
+    <h2>All members of our team are professionals<h2>
+    <br>
+    {% include 'includes/member_left.html' %}
+    <br>
+    <br>
+    {% include 'includes/footer.html' %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href=" {% static 'navbar.css' %}">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">CLS Global</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="#">Product</a>
+      <a href="#">Contact Us</a>
+    </nav>
+  </header>
+  <script>
+    const header = document.querySelector('.header');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>

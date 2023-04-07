@@ -1,0 +1,98 @@
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: #8e44ad;
+  border: 1px solid #7e349d;
+  border-radius: 8px;
+  padding: 24px;
+  width: calc(25% - 16px);
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #fff; /* Добавлено: белый цвет текста */
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.pricing-card ul {
+  list-style-type: none;
+  margin-bottom: 16px;
+  text-align: left; /* Добавлено: выравнивание текста по левому краю */
+  padding: 0; /* Добавлено: удаление отступов списка */
+}
+
+.pricing-card .price {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-card {
+    width: 100%;
+  }
+  
+  /* ... существующие стили ... */
+  
+  @media (max-width: 1024px) {
+    .pricing-card {
+      width: calc(33.3333% - 16px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pricing-card {
+      width: calc(50% - 16px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pricing-card {
+      width: 100%;
+    }
+  }
+  /* Добавьте следующий код в конец файла styles.css */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Выберите все элементы с классом .scroll-animation, которые видимы на экране */
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Добавьте следующий код в конец файла styles.css */
+}
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+  visibility: hidden;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+

@@ -1,0 +1,51 @@
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href=" {% static 'main_page/css/price.css' %}">
+  <!-- Подключение AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-hz8x6vIT1j+Asyc/q9Xo+P8G/qj/46Y1WMmQfBMTW0E8FvKzg7pX9RoowPDW7o0yKlJfLLpsg2QDlqfzr2Q3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-DKWiG/1NXCxJ9XowP+Lqljt/6G80W7K8N/2lERpoz1T6mKqf3rI6UgMnUROKjRfoW7z8YFvmuY7AaRUpZuS7xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+
+<div class="pricing-container">
+    
+    <div class="pricing-card" data-aos="fade-up">
+      <h3>Тариф Z</h3>
+      <ul>
+        <li>- Преимущество</li>
+        <li>- Преимущество</li>
+        <li>- Преимущество</li>
+        <li>- Недостаток</li>
+        <li>- Недостаток</li>
+        <li>- Недостаток</li>
+        <li>- Недостаток</li>
+      </ul>
+      <p class="price">1000 руб./мес.</p>
+</div>
+<div class="pricing-card" data-aos="fade-up">
+        <h3>Тариф 5</h3>
+        <ul>
+          <li>Преимущество 1</li>
+          <li>Преимущество 2</li>
+          <li>Преимущество 3</li>
+        </ul>
+        <p class="price">2000 руб./мес.</p>
+    </div>
+    <div class="pricing-card" data-aos="fade-up">
+        <h3>Тариф 6</h3>
+        <ul>
+          <li>Преимущество 1</li>
+          <li>Преимущество 2</li>
+          <li>Преимущество 3</li>
+        </ul>
+        <p class="price">3000 руб./мес.</p>
+      </div>
+    </div><script>
+        AOS.init({
+            duration: 1000, // Увеличиваем длительность анимации до 1 секунды
+            easing: 'ease-in-out', // Используем плавное ускорение и замедление для анимации
+            once: true // Анимация будет проигрываться только один раз при появлении элемента на экране
+          });
+      </script>
